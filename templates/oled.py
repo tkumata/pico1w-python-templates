@@ -1,10 +1,7 @@
 from machine import SPI, Pin
 from utime import sleep
 
-from ssd1351 import SSD1351
-
-# ピン設定
-pin = Pin("LED", Pin.OUT)
+from presentation.oled.ssd1351 import SSD1351
 
 # 色定義
 COLORS = {
@@ -28,19 +25,15 @@ rst = Pin(17, Pin.OUT)
 display = SSD1351(128, 128, spi, dc, cs, rst)
 
 # Main Loop
-print("LED starts flashing...")
 while True:
     try:
-        pin.toggle()
         display.fill(COLORS["BLACK"])
         display.hline(0, 10, 128, COLORS["WHITE"])
         display.text("Hello World!", 4, 60, COLORS["WHITE"], size=2)
-        display.text("Pico W x", 0, 90, COLORS["WHITE"])
-        display.text("MicroPython", 10, 100, COLORS["WHITE"])
+        display.text("Pico W", 0, 90, COLORS["MAGENTA"])
+        display.text("x", 35, 90, COLORS["WHITE"])
+        display.text("MicroPython", 40, 100, COLORS["YELLOW"])
         display.show()
-        sleep(.5)
+        sleep(1)
     except KeyboardInterrupt:
         break
-
-pin.off()
-print("Finished.")
