@@ -1,5 +1,6 @@
 # 雛形
 
 - **led_blink.py**: L チカ
-- **oled.py**: SSD1351 OLED ディスプレイに何か表示
-- **wifi_sta.py**: クライアントとして Wi-Fi AP に接続
+- **oled.py**: SSD1351 に何かを表示する
+- **wifi_sta.py**: 単純な Wi-Fi クライアント
+- **api_server.py**: 簡易 API サーバ + Wi-Fi クライアント
