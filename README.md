@@ -1,6 +1,6 @@
 # Pico W 開発雛形
 
-Pico W と MicroPython で開発する際の雛形
+Pico W と VS Code と MicroPython で開発する際の雛形
 
 ## 使い方
 
@@ -13,3 +13,7 @@ Pico W と MicroPython で開発する際の雛形
 2. ファイルツリーのペインを右クリックし `Initialize MicroPico project` を選択
 3. Pico W 接続
 4. 開発開始
+
+## 雛形種類
+
+[雛形種類](./templates/README.md)
