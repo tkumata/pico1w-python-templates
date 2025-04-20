@@ -70,6 +70,3 @@ while True:
     except OSError:
         pass
     time.sleep(0.01)
-
-# Close the socket when done
-http_socket.close()
